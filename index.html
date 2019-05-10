@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <title>repl.it</title>
+    <title>Final Exam</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -45,7 +45,7 @@
                     for ([i, loc] of data.entries()) {
                     let latlng = new google.maps.LatLng(loc.latitude, loc.longitude)
                     let infowindow = new google.maps.InfoWindow({
-                        content: `distance from you: ${distance(loc.latitude, loc.longitude, window.usrLat, window.usrLng)}`
+                        content: `distance from you: ${distance(loc.latitude, loc.longitude, window.usrLat, window.usrLng)}mi.`
                     })
                     let marker = new google.maps.Marker({position: latlng, title: loc.address, map: map})
                     marker.addListener('click', function() {
